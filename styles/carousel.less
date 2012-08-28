@@ -1,0 +1,50 @@
+/**
+ * Created by JetBrains PhpStorm.
+ * User: Mike
+ * Date: 27/8/2012
+ * Time: 4:51 μμ
+ * To change this template use File | Settings | File Templates.
+ */
+
+@navHeight : 50px;
+
+#carousel {
+
+    //position:relative;
+
+    .card:last-child {
+        //padding-bottom: 20px;
+    }
+
+    .card {
+        border: 1px solid silver;
+        height: 100%;
+        //min-height:400px;
+
+        .content{
+            height: 100%;
+            border:1px solid green;
+            width:700px;
+            margin: 0 auto;
+            padding-left: 260px;
+            min-height:700px;
+        }
+
+        .nav {
+            height: @navHeight;
+            margin-top:-@navHeight;
+            border: 1px solid blue;
+
+            .up, .down {
+                display: block;
+                left:50%;
+                position:relative;
+                margin-left: -25px;
+                height: 20px;
+                width: 50px;
+                background-color: #ff7f50;
+                border: 1px solid black;
+            }
+        }
+    }
+}

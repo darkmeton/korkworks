@@ -1,0 +1,202 @@
+
+@logoHeight:50px;
+
+#logo {
+     position:absolute;
+     height: @logoHeight;
+      width:300px;
+      top:20px;
+      margin-left:-260px;
+      border: 1px solid #dc143c;
+      display: inline-block;
+
+}
+
+#menu {
+    z-index: 10;
+    position:fixed;
+    width:260px;
+    /*border: 1px solid #dc143c;*/
+    height: 100px;
+    left:50%;
+    margin-left:-480px;
+    top:80+ @logoHeight;
+    
+    li {
+      margin: 10px 0;
+    }
+}
+
+#banner {
+    width:120px;
+    height: 120px;
+    border-radius: 60px;
+    position:absolute;
+    right: 0;
+    border: 1px solid orange;
+    top:10px;
+
+    &:active{
+        top:14px;
+    }
+}
+
+
+
+#carousel {
+     .content {
+         position:relative;
+         padding-top: 80px;
+     }
+
+
+
+     .pocket{
+
+        display:inline-block;
+        position:relative;
+         margin: 15px;
+         &:after{
+               content: '';
+               height: 20px;
+               position: absolute;
+               background-color: white;
+               top: -7px;
+               left: -26px;
+               width: 58px;
+               z-index: 10;
+               -webkit-transform: rotate(-45deg);
+               box-shadow: 0 6px 9px -8px hsla(0,0%,0%,.5);
+            }
+
+         .pocketbottom:after{
+           content: '';
+           height: 20px;
+           position: absolute;
+           background-color: white;
+           bottom: -4px;
+           right: -26px;
+           width: 58px;
+           z-index: 10;
+            -webkit-transform: rotate(135deg);
+            box-shadow: 0 6px 9px -8px hsla(0,0%,0%,.5);
+         }
+    }
+
+
+     .frameborder {
+            display: inline-block;
+            box-shadow:  0 1px 4px rgba(0, 0, 0, 0.4);
+
+            border-radius:3px;
+            //position:relative;
+
+            &.large{
+                 position:absolute;
+                 //opacity: 0.5;
+                 z-index: 20;
+                 background-color: white;
+                 top: 30px;
+
+                 .frame{
+                     width:600px;
+                     height: 400px;
+                     vertical-align:top;
+
+                     .image{
+                          width:300px;
+                          height: 400px;
+                          display: inline-block;
+                          background-size:contain;
+                          background-repeat:no-repeat;
+
+                     }
+
+                     .description{
+                         display: inline-block;
+                         position:absolute;
+                         top:40px;
+                         right: 10px;
+                         border:1px solid red;
+                         width: 250px;
+                         text-align: right;
+                     }
+
+                     .contact {
+                          position: absolute;
+                          bottom: 10px;
+                          right: 10px;
+                          border: 1px solid black;
+                          padding: 10px;
+                     }
+
+                     .close {
+                        position:absolute;
+                        top:10px;
+                        right:10px;
+                        width: 20px;
+                        height: 20px;
+                        text-align: center;
+
+                     }
+                 }
+            }
+
+            &.small{
+               .frame{
+                  width:180px;
+                  margin: 8px;
+                  height: 120px;
+
+                   .image{
+                       width:180px;
+                       height: 120px;
+                       background-size: cover;
+                   }
+               }
+
+            }
+
+
+            -webkit-transition: all 0.1s linear;
+            -moz-transition: all 0.1s linear;
+            -o-transition: all 0.1s linear;
+
+        &.small:hover {
+            -webkit-transform: rotate(-2deg);
+            -webkit-transform-origin: 0px 80px;
+            -moz-transform: rotate(-2deg);
+            -o-transform: rotate(-2deg);
+        }
+     }
+
+     .note {
+           border: 1px solid red;
+           text-align: center;
+           left: 50%;
+           top:300px;
+            position:absolute;
+            z-index: 0;
+     }
+
+     .letter {
+        position:absolute;
+         z-index: 10;
+         width: 600px;
+         height: 300px;
+         border: 1px solid blue;
+         left:50%;
+         top:200px;
+         margin-left: -200px;
+         background-color: silver;
+
+         .send{
+            border:1px solid black;
+            position:absolute;
+            bottom: 5px;
+            right: 5px;
+            padding: 10px;
+
+         }
+     }
+}
